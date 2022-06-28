@@ -768,6 +768,10 @@ span {
   margin-bottom: 2rem;
 }
 
+.-mt-4 {
+  margin-top: -1rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -794,18 +798,6 @@ span {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.-mt-4 {
-  margin-top: -1rem;
-}
-
-.-mt-10 {
-  margin-top: -2.5rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
 }
 
 .block {
@@ -864,13 +856,14 @@ span {
   background-color: rgb(45 49 77 / var(--tw-bg-opacity));
 }
 
-.fill-white {
-  fill: #fff;
-}
-
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .py-24 {
@@ -881,20 +874,6 @@ span {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
 }
 
 .text-center {
@@ -941,20 +920,6 @@ span {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.invert {
-  --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.sepia {
-  --tw-sepia: sepia(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .hover\:text-lime:hover {
   --tw-text-opacity: 1;
   color: rgb(49 211 92 / var(--tw-text-opacity));
@@ -987,26 +952,6 @@ span {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .mobile\:-top-24 {
-    top: -6rem;
-  }
-
-  .mobile\:-top-16 {
-    top: -4rem;
-  }
-
-  .mobile\:-top-10 {
-    top: -2.5rem;
-  }
-
-  .mobile\:-top-2 {
-    top: -0.5rem;
-  }
-
-  .mobile\:-top-8 {
-    top: -2rem;
-  }
-
   .mobile\:-top-7 {
     top: -1.75rem;
   }
@@ -1016,16 +961,8 @@ span {
     margin-right: 0.5rem;
   }
 
-  .mobile\:-mt-20 {
-    margin-top: -5rem;
-  }
-
   .mobile\:mb-8 {
     margin-bottom: 2rem;
-  }
-
-  .mobile\:-mt-10 {
-    margin-top: -2.5rem;
   }
 
   .mobile\:inline-block {
@@ -1054,14 +991,6 @@ span {
 
   .mobile\:items-center {
     align-items: center;
-  }
-
-  .mobile\:pb-10 {
-    padding-bottom: 2.5rem;
-  }
-
-  .mobile\:pb-14 {
-    padding-bottom: 3.5rem;
   }
 
   .mobile\:pb-16 {
@@ -1176,10 +1105,6 @@ span {
 
   .desktop\:justify-between {
     justify-content: space-between;
-  }
-
-  .desktop\:bg-\[url\(\'\.\.\/images\/bg-intro-desktop\.svg\'\)\] {
-    background-image: url('../images/bg-intro-desktop.svg');
   }
 
   .desktop\:text-left {
