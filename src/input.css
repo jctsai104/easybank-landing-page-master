@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    h1, h2, h3 {
+        @apply text-db;
+    }
+    h4{
+        @apply text-gb text-2xl;
+    }
+    p{
+        @apply text-gb text-lg mobile:text-sm;
+    }
+}
+@layer components {
+    .decLine {
+        @apply text-gb hover:text-db relative
+        hover:after:content-[''] hover:after:inline-block hover:after:bg-gradient-to-r from-lime to-bcn hover:after:w-full hover:after:h-1 hover:after:absolute hover:after:left-0 hover:after:top-[3.2rem]
+        mobile:my-3;
+    }
+    .deskNav {
+        @apply flex flex-row w-1/2 justify-around;
+    }
+    .humburger {
+        @apply flex flex-col text-db  bg-white
+        w-5/6 h-48 overflow-hidden absolute left-0 top-full z-30 translate-x-10% translate-y-12px items-center justify-center rounded-md max-h-0
+        transition-[max-height] ease-in-out;
+    }
+    .cta {
+        @apply text-sm font-medium px-6 py-2 rounded-full bg-gradient-to-r from-lime to-bcn text-white hover:opacity-75;
+    }
+    .container {
+        @apply m-auto items-center desktop:max-w-1200 mobile:p-m;
+    }
+    .cards {
+        @apply pb-6 desktop:w-1/4 desktop:mr-4 mobile:w-full mobile:text-center;
+    }
+    .articleCards {
+        @apply bg-white desktop:w-1/4 mobile:w-full rounded-lg pb-4 my-4;
+    }
+    span {
+        @apply text-xs text-gb;
+    }
+    .articleTitle {
+        @apply text-xl text-db hover:text-lime cursor-pointer;
+    }
+    .articleTxt {
+        @apply desktop:text-lg leading-5 mobile:text-base;
+    }
+    .articleImg {
+        @apply object-cover rounded-t-lg w-80 h-52;
+    }
+}

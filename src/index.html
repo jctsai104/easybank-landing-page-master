@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="font-public-sans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <title>Frontend Mentor | Easybank landing page</title>
+  <link href="../dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&amp;display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      width: 100%;
+      height: 100%;
+    }
+
+    #switch:checked ~ .menu{
+      max-height: 250px;
+      z-index: 100;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @media screen and (min-width: 768px) {
+      .desktopBg  {
+        background-image: url(../images/bg-intro-desktop.svg);
+        background-position: 150% 0%;
+        background-repeat:no-repeat;
+        background-size: 70%;
+      }
+    }
+    @media screen and (max-width: 357px ){
+      .mobileBg  {
+        background-image: url(../images/bg-intro-mobile.svg);
+        background-repeat:no-repeat;
+        background-size: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="py-6 bg-white z-10 w-full fixed">
+      <div class="container flex justify-between">
+        <!-- logo -->
+        <div class="imgBox w-1/2">
+          <img src="../images/logo.svg" alt="logo" class="align-top">
+        </div>
+        <label for="switch" class="desktop:hidden mobile:inline-block">
+          <img src="../images/icon-hamburger.svg" alt="menu">
+        </label>
+        <!-- 選單 -->
+        <input type="checkbox" id="switch" class="hidden">
+          <ul class="desktop:deskNav mobile:humburger menu">
+            <li class="desktop:decLine"> <a href="#">Home</a> </li>
+            <li class="desktop:decLine"> <a href="#">About</a> </li>
+            <li class="desktop:decLine"> <a href="#">Contact</a> </li>
+            <li class="desktop:decLine"> <a href="#">Blog</a> </li>
+            <li class="desktop:decLine"> <a href="#">Careers</a> </li>
+          </ul>
+          <div class="w-1/2 text-right mobile:hidden">
+            <button class="cta">Request Invite</button>
+          </div>
+        </input>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 第一屏 -->
+    <section class="desktopBg mobileBg relative z-0  overflow-hidden bg-vlg">
+      <div class="container flex mobile:flex-col-reverse mobile:pb-16">
+        <!-- 主標們 -->
+        <div class="desktop:w-full desktop:text-left mobile:text-center mobile:w-full">
+          <h1 class="my-8 desktop:text-5xl desktop:leading-snug mobile:text-4xl -mt-4">
+            Next generation<br>
+            digital banking
+          </h1>
+          <p class="my-8">
+            Take your financial life online. Your Easybank account will be a one-stop-shop
+            for spending, saving, budgeting, investing, and much more.
+          </p>
+          <button class="cta">Request Invite</button>
+        </div>
+        <!-- 手機圖 定位在section上 -->
+        <div class="imgBox relative desktop:-top-20 desktop:-right-64 mobile:-top-7">
+          <img src="../images/image-mockups.png" alt="mockup" class="w-screen z-0">
+        </div>
+      </div>
+    </section>
+    <!-- 四個重點 -->
+    <section class="bg-lgb w-full">
+      <div class="container py-16">
+        <!-- 標題 -->
+        <div class="mb-16 flex-col desktop:w-1/2 mobile:w-full moblie:items-center">
+          <h2 class="text-4xl mobile:text-3xl mb-4 text-center desktop:text-left">
+            Why choose Easybank?
+          </h2>
+          <p class="text-center desktop:text-left">
+            We leverage Open Banking to turn your bank account into your financial hub. Control
+            your finances like never before.
+          </p>
+        </div>
+        <!-- 四張卡片 -->
+        <div class="row flex mobile:flex-col">
+          <div class="cards">
+            <div class="mb-6">
+              <img src="../images/icon-online.svg" class="mobile:inline" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-xl mb-6">
+                Online Banking
+              </h3>
+            </div>
+            <div>
+              <p>
+                Our modern web and mobile applications allow you to keep track of your finances
+                wherever you are in the world.
+              </p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="mb-6">
+              <img src="../images/icon-budgeting.svg" class="mobile:inline" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-xl mb-6">
+                Simple Budgeting
+              </h3>
+            </div>
+            <div>
+              <p>
+                See exactly where your money goes each month. Receive notifications when you’re
+                close to hitting your limits.
+              </p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="mb-6">
+              <img src="../images/icon-onboarding.svg" class="mobile:inline" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-xl mb-6">
+                Fast Onboarding
+              </h3>
+            </div>
+            <div>
+              <p>
+                We don’t do branches. Open your account in minutes online and start taking control
+                of your finances right away.
+              </p>
+            </div>
+          </div>
+          <div class="cards ">
+            <div class="mb-6">
+              <img src="../images/icon-api.svg" class="mobile:inline" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-xl mb-6">
+                Open API
+              </h3>
+            </div>
+            <div>
+              <p>
+                Manage your savings, investments, pension, and much more from one account. Tracking
+                your money has never been easier.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 最新文章 -->
+    <section class="bg-vlg">
+      <div class="container py-24">
+        <h2 class="desktop:text-4xl mobile:text-4xl mb-8 mobile:text-center">
+          Latest Articles
+        </h2>
+        <!-- 文章卡片 -->
+        <div class="row flex mobile:flex-col">
+          <div class="articleCards">
+            <div class="imgBox">
+              <img src="../images/image-currency.jpg" class="articleImg">
+            </div>
+            <div class="m-8">
+              <div class="author mb-2">
+                <span>
+                  By Claire Robinson
+                </span>
+              </div>
+              <div class="title mb-2">
+                <h4 class="articleTitle">
+                  Receive money in any currency with no fees
+                </h4>
+              </div>
+              <div class="txt mb-2">
+                <p class="articleTxt">
+                  The world is getting smaller and we’re becoming more mobile. So why should you be
+                  forced to only receive money in a single …
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="articleCards desktop:ml-4 desktop:mr-2">
+            <div class="imgBox">
+              <img src="../images/image-restaurant.jpg" class="articleImg">
+            </div>
+            <div class="m-8">
+              <div class="author mb-2">
+                <span>
+                  By Wilson Hutton
+                </span>
+              </div>
+              <div class="title mb-2">
+                <h4 class="articleTitle">
+                  Treat yourself without worrying about money
+                </h4>
+              </div>
+              <div class="txt mb-2">
+                <p class="articleTxt">
+                  Our simple budgeting feature allows you to separate out your spending and set
+                  realistic limits each month. That means you …
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="articleCards desktop:mr-4 desktop:ml-2">
+            <div class="imgBox">
+              <img src="../images/image-plane.jpg" class="articleImg">
+            </div>
+            <div class="m-8">
+              <div class="author mb-2">
+                <span>
+                  By Wilson Hutton
+                </span>
+              </div>
+              <div class="title mb-2">
+                <h4 class="articleTitle">
+                  Take your Easybank card wherever you go
+                </h4>
+              </div>
+              <div class="txt mb-2">
+                <p class="articleTxt">
+                  We want you to enjoy your travels. This is why we don’t charge any fees on purchases
+                  while you’re abroad. We’ll even show you …
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="articleCards">
+            <div class="imgBox">
+              <img src="../images/image-confetti.jpg" class="articleImg">
+            </div>
+            <div class="m-8">
+              <div class="author mb-2">
+                <span>
+                  By Claire Robinson
+                </span>
+              </div>
+              <div class="title mb-2">
+                <h4 class="articleTitle">
+                  Our invite-only Beta accounts are now live!
+                </h4>
+              </div>
+              <div class="txt mb-2">
+                <p class="articleTxt">
+                  After a lot of hard work by the whole team, we’re excited to launch our closed beta.
+                  It’s easy to request an invite through the site ...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-db py-8">
+    <section>
+      <div class="container desktop:flex desktop:justify-between mobile:flex-col">
+        <div class="left desktop:flex mobile:flex-col">
+          <!-- 最左 -->
+          <div class="logos flex flex-col justify-between desktop:mr-24 mobile:items-center mobile:text-center">
+            <div class="logoBox mobile:mb-8">
+              <img src="../images/logo.svg" alt="logo" class="logo">
+            </div>
+            <div class="social mobile:mb-8">
+              <ul class="flex justify-between mobile:w-full">
+                <li class="mobile:mx-2"><a href="#"><img src="../images/icon-facebook.svg" alt="facebook"></a></li>
+                <li class="mobile:mx-2"><a href="#"><img src="../images/icon-youtube.svg" alt="youtube"></a></li>
+                <li class="mobile:mx-2"><a href="#"><img src="../images/icon-twitter.svg" alt="twitter"></a></li>
+                <li class="mobile:mx-2"><a href="#"><img src="../images/icon-pinterest.svg" alt="pinterest"></a></li>
+                <li class="mobile:mx-2"><a href="#"><img src="../images/icon-instagram.svg" alt="instagram"></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- 清單 -->
+          <div class="row desktop:flex mobile:flex-col mobile:mb-8">
+            <ul class="desktop:mr-24 mobile:text-center">
+              <li class="text-white hover:text-lime font-light text-sm leading-loose"><a href="#">About Us</a></li>
+              <li class="text-white hover:text-lime font-light text-sm leading-loose"><a href="#">Contact</a></li>
+              <li class="text-white hover:text-lime font-light text-sm leading-loose"><a href="#">Blog</a></li>
+            </ul>
+            <ul class="mobile:text-center">
+              <li class="text-white hover:text-lime font-light text-sm leading-loose"><a href="#">Careers</a></li>
+              <li class="text-white hover:text-lime font-light text-sm leading-loose"><a href="#">Support</a></li>
+              <li class="text-white hover:text-lime font-light text-sm leading-loose"><a href="#">Privacy Policy</a></li>
+            </ul class="mr-20">
+          </div>
+        </div>
+
+        <div class="desktop:text-right mobile:text-center">
+          <button class="cta">Request Invite</button>
+          <span class="text-sm mobile:text-xs block mt-8">
+            © Easybank. All Rights Reserved
+          </span>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
